@@ -1,0 +1,229 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+
+}
+.upnav{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    padding-right: 20px;
+    position:fixed;
+    top: 0;
+    z-index: 0;
+    
+}
+.upnav>svg{
+    color: gray;
+    float: right;
+    width: 45px;
+    height: 35px;
+    margin-right: 10px;
+    padding-top: 7px;
+    cursor: pointer;
+}
+.upnav>svg:hover{
+    color: aliceblue;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "navbar"
+    "main"
+    "footer";
+    margin-top: 40px;
+}
+nav{
+    grid-area: navbar;
+    width:100%;
+    background-color:white;
+    height:55px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-areas: 
+    "dots leter subjects";
+}
+.dots{
+    grid-area: dots;
+}
+.dots>svg{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-top: 13px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.dots>svg:hover{
+    width: 35px;
+    height: 35px;
+    color: red;
+    margin-left: 17.5px;
+    margin-top:12px;
+}
+.leter{
+    grid-area: leter;
+    margin-left: 30px;
+    margin-top: 6px;
+    font-size: 35px;
+    cursor: pointer;
+    margin-right: 50px;
+    letter-spacing: 1px;
+    margin-left: 15px;
+}
+.subjects{
+    font-size: 20px;
+    display: flex;
+}
+.subject{
+    cursor: pointer;
+    height: 100%;
+    padding-top: 15px;
+    margin-left: 20px;
+}
+.subject>svg{
+    transform: rotateX(0deg);
+    transition: 0.7s;
+    width: 18px;
+    height: 18px;
+    padding-left: 4px;padding-top:6px
+}
+.subject:hover{
+    color: red;
+}
+.subject:hover>svg{
+    transform: rotateX(150deg);
+    padding-top: 0px;
+}
+main{
+    grid-area: main;
+    width: 100vr;
+    height:100%;
+    background-color: aliceblue;
+    z-index: 1;
+}
+.pic{
+    width: 100%;
+    height: 700px;
+    background-image: url("images/rr/The\ weeknd\ dancing\ in\ the\ flames_.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.pic >h1{
+    width: 500px;
+    text-align:center;
+    color: aliceblue;
+    padding-top: 230px;
+    margin-left: 140px;
+    font-size: 35px;
+}
+.pic>p{
+    padding-top:20px;
+    margin-left: 90px;
+    font-size: 18px;
+    width: 600px;
+    text-align: center;
+    color: aliceblue;
+    margin-bottom: 60px;
+    
+}
+.link1{
+    margin-left: 320px;
+    color: aliceblue;
+    background-color: aliceblue;
+    display: inline;
+    padding: 17px;
+    background: linear-gradient(45deg,transparent 12px ,#ddd  );
+    transition: 0.6s;
+    cursor: pointer;
+}
+.link1:hover{
+     color: black;
+     background: linear-gradient(45deg,transparent 12px ,#ddd 0 );
+     padding: 20px;
+}
+.features{
+    height: 750px;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "image image image"
+    "image image image";
+    gap: 25px;
+    padding: 10px;
+}
+.features .card{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image{
+    grid-area: image;
+    inset: 0;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.685);
+}
+.image>img{
+    width: 100%;
+    height: 100%;
+    transition: 2s;
+}
+.card>h2{
+    margin-top: 180px;
+    color: aliceblue;
+    z-index: 1;
+    width: 200px;
+    text-align: center;
+}
+.image>img:hover{
+    mix-blend-mode: multiply;
+    transition: 2s;
+}
+.card:hover h2{
+    z-index: 5;
+    margin-top: 0;
+    transition: 1s;
+}
+.poin{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom:80px ;
+}
+.poin1{
+     border: 2px solid black;
+     display: inline;
+     padding: 13px;
+     font-size: 18px;
+     cursor: pointer;
+     border-radius: 3px;
+     transition: 0.2s;
+}
+.poin1:hover{
+    padding: 18px;
+}
+footer{
+    grid-area: footer;
+    width: 100vr;
+    background-color: blue;
+    height: 150px;
+}
