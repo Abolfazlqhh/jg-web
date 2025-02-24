@@ -4,7 +4,10 @@
     padding: 0;
 }
 body{
-
+    
+}
+.maiin{
+    height: 95px;
 }
 .upnav{
     width: 100%;
@@ -69,6 +72,7 @@ nav{
     color: red;
     margin-left: 17.5px;
     margin-top:12px;
+    margin-right: -2.5px;
 }
 .leter{
     grid-area: leter;
@@ -108,7 +112,7 @@ main{
     grid-area: main;
     width: 100vr;
     height:100%;
-    background-color: aliceblue;
+    background-color: rgb(240, 248, 255);
     z-index: 1;
 }
 .pic{
@@ -160,11 +164,8 @@ main{
     margin-right: auto;
     margin-top: 35px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "image image image"
-    "image image image";
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
     gap: 25px;
     padding: 10px;
 }
@@ -178,7 +179,6 @@ main{
 .image{
     grid-area: image;
     inset: 0;
-    border-radius: 20px;
     position: absolute;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.685);
@@ -195,7 +195,7 @@ main{
     width: 200px;
     text-align: center;
 }
-.image>img:hover{
+.card:hover img{
     mix-blend-mode: multiply;
     transition: 2s;
 }
@@ -219,11 +219,354 @@ main{
      transition: 0.2s;
 }
 .poin1:hover{
-    padding: 18px;
+    padding: 16px 22px;
+}
+.albumsnav{
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.albumsnav>a{
+    text-decoration: none;
+    color: black
+    ;
+}
+.albumsnav>a>div{
+    margin-top: 18px;
+    margin-bottom: 18px;
+    margin-left: 18px;
+    margin-right: 18px;
+    font-size: 20px;
+}
+.albumsnav>a:hover{
+    background-color: rgba(161, 159, 159, 0.63);
+}
+a:hover div{
+    border-bottom: solid red 2px;
+    padding-bottom: 16px;
+    margin-bottom: 0px;
+    transition: 0.2s;
+    opacity: 0.8;
+}
+.albumsnav>a:active{
+    background-color: rgba(161, 159, 159, 0.63);
+}
+span{
+    width: 0.5px;
+    height: 18px;
+    border: 1px solid rgb(185, 185, 185);
+    margin-top:19px ;
+}
+.listalbums{
+    height: 1100px;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 1fr 1fr;
+    gap: 18px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+.listalbums>div{
+    background-color:aliceblue;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    box-shadow: 0px 2px 15px -4px rgba(0,0,0,0.50);
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+}
+.namealbum{
+    font-size: 30px;margin-bottom:10px
+}
+.ci{
+    height: 220px;
+}
+.img2{
+    width: 100%;
+    height: 220px;
+    position: absolute;
+}
+.img2>img{
+    height: 100%;
+    width: 100%;
+}
+.listalbums>div:hover{
+    margin-bottom: 15px;
+    transition: 1s;
+    margin-top: -15px;
+    box-shadow: 0px 27px 37px -5px rgba(0,0,0,0.79);
+}
+.underimg{
+    padding: 22px 18px;
+}
+.kl{
+    display: flex;
+    color: red;
+    font-weight: 600;
+}
+.pic2{
+    width: 100%;
+    height: 580px;
+}
+.pic2>img{
+    width: 100%;
+    height: 100%;
+}
+.cont{
+    position: relative;
+    top: -360px;
+    left: 100px;
+    color: #ddd;
+    width: 450px;
+    height: 300px;
+}
+.cont>h2{
+    padding-bottom: 20px;
+}
+.cont>p{
+    font-size: 18px;
+}
+.poi{
+    width: 200px;
+    position: relative;
+    top: -520px;
+    margin-left: 100px;
+}
+.poi>div{
+    color: #ffffff;
+    border: 2px solid rgb(255, 255, 255);
+    display: inline;
+    padding: 13px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+.poi>div:hover{
+    margin-left: -9px;
+}
+.slogan{
+    width: 100%;
+    background-color: #a1e4ec;
+    height: 120px;
+    display: grid;
+}
+.slogan>p{
+    width:500px;
+    height: 100%;
+    font-size:25px;
+    font-weight: 600;
+    margin-left: 90px;
+    padding-top: 26px;
+}
+.linkk{
+    margin-top: auto;
+    cursor: pointer;
+    margin-left: auto;
+    display: inline;
+}
+.linkk>div{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 13px 16px;
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+    margin-right: 100px;
+    margin-top: -85px;
+}
+.linkk:hover div{
+    padding: 16px 19px;
+    margin-top: -87.5px;
+    margin-right: 97px;
+    transition: 0.5s;
+}
+.lstpic{
+    width: 100%;
+    height: 440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.lstpic>div{
+    height: 440px;
+    width: 100%;
+}
+.lstpic>div>img{
+    width: 100%;
+    height: 100%;
+}
+.lstpic>p{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0px 80px ;
+    font-size: 24px;
+}
+.lstprt{
+    max-width:1100px ;
+    height: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lstprt>p{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.lstprt>p>a{
+    color: red;
+    text-decoration: none;
+}
+.support{
+    display: flex;
+    margin-top: 40px;
+
+}
+.support>p{
+    margin-right: 40px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.support>div{
+    margin-left: 267px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.support>p:hover{
+    color: red;
+}
+.socialmedias{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    height: 40px;
+    align-items: center;
+}
+.socialmedias>svg{
+    width: 26px;
+    height: 26px;
+    margin-left:24px ;
+    cursor: pointer;
+}
+.socialmedias>svg:hover{
+    width: 30px;
+    height: 30px;
+    margin-left: 22px;
+    margin-right: -2px;
+    transition: 0.1s;
 }
 footer{
     grid-area: footer;
     width: 100vr;
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
     height: 150px;
+}
+
+@media (max-width:1140px) {
+    .features{
+     height: 600px;
+     max-width: 850px;
+     margin-bottom: 55px;
+    }
+    .albumsnav{
+        max-width: 850px;
+    }
+    .listalbums{
+        max-width: 850px;
+        margin-bottom: 90px;
+    }
+    .namealbum{
+        font-size: 23px;
+    }
+    .support>p{
+        font-size: 15px;
+        margin-right: 20px;
+    }
+    .lstprt{
+        max-width: 850px;
+    }
+    .support>div{
+        margin-left: 200px;
+    }
+    .pic >h1{
+        margin-left: 0px;
+        width: 400px;
+    }
+    .pic>p{
+        margin-left: 0px;
+        width: 400px;
+    }
+    .link1{
+        margin-left: 130px;
+    }
+    .leter{
+        margin-right: 25px;
+    }
+}
+@media (max-width:942px) {
+    .pic{
+        height: 500px;
+    }
+    nav{
+        display: none;
+    }
+    .pic h1{
+        padding-top: 100px;
+    }
+    .features{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 33% 33% 33%;
+        height: 100vh;
+        max-width: 700px;
+    }
+    .albumsnav{
+        max-width: 700px;
+    }
+    .albumsnav>a>div{
+        font-size: 17px
+    }
+    .listalbums{
+        max-width:700px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 1500px;
+    }
+    .xplalbum{
+        font-size: 1px;
+    }
+    .namealbum{
+        font-size: 18px;
+    }
+    .lstprt{
+        max-width: 700px;
+        height: 260px;
+    }
+    .support>div{
+        position: absolute;
+        color: red;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+    .socialmedias{
+        justify-content: flex-start;
+        margin-top: 54px;
+    }
+    .socialmedias>svg{
+        margin-left: 0;
+        margin-right: 24px;
+    }
+    .socialmedias>svg:hover{
+        margin-left: -2px;
+        margin-right: 22px;
+    }
+    .cont{
+        width: 300px;
+        left: 20px;
+    }
 }
