@@ -9,6 +9,9 @@ body{
 .maiin{
     height: 95px;
 }
+.svg1{
+    display: none;
+}
 .upnav{
     width: 100%;
     height: 40px;
@@ -60,7 +63,6 @@ nav{
 .dots>svg{
     width: 30px;
     height: 30px;
-    position: relative;
     margin-top: 13px;
     margin-left: 20px;
     cursor: pointer;
@@ -467,8 +469,11 @@ footer{
     background-color: rgb(255, 255, 255);
     height: 150px;
 }
+.contain2{
+    display: none;
+}
 
-@media (max-width:1140px) {
+@media (max-width:1250px) {
     .features{
      height: 600px;
      max-width: 850px;
@@ -509,12 +514,78 @@ footer{
         margin-right: 25px;
     }
 }
-@media (max-width:942px) {
+@media (max-width:1020px) {
+    body.active{
+        position: fixed;
+    }
+    .container.active{
+        background-color: rgba(0, 0, 0, 0.575);
+        mix-blend-mode: multiply;
+    }
+    .svg1{
+        display: inline;
+    }
+    .svg2{
+        display: none;
+    }
     .pic{
         height: 500px;
     }
-    nav{
+    .subjects{
         display: none;
+    }
+    .contain2{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        transition: 0.4s;
+        left: -1000px;
+        display: grid;
+        grid-template-columns: 340px 1fr;
+        grid-template-areas:
+        "nav2 nb";
+    }
+    .nav2{
+        width: 340px;
+        background-color: #fff;
+        height: 100vh;
+        position:fixed ;
+        grid-area: nav2;
+    }
+    .nb{
+        width: 100%;
+        grid-area: nb;
+        height: 100vh;
+        background-color: #00000070;
+    }
+    .leter2{
+        width: 100%;
+        height: 55px;
+        background:#ececec;
+        padding: 9px 20px;
+        font-size: 32px;
+        
+    }
+    .leter2 svg{
+        width: 20px;
+        height: 20px;
+        margin-left: 130px;
+        cursor: pointer;
+    }
+    .pad{
+        padding: 0px 30px;
+    }
+    .pad div{
+        padding: 20px 0px;
+        border-bottom:1px solid black ;
+        cursor: pointer;
+    }
+    .pad div:hover{
+        color: red;
+    }
+    .contain2.active{
+        left: 0;
     }
     .pic h1{
         padding-top: 100px;
@@ -547,6 +618,9 @@ footer{
         max-width: 700px;
         height: 260px;
     }
+    .lstprt p{
+        font-size: 15px;
+    }
     .support>div{
         position: absolute;
         color: red;
@@ -568,5 +642,185 @@ footer{
     .cont{
         width: 300px;
         left: 20px;
+    }
+    .slogan p{
+        font-size: 21px; 
+        max-width: 400px;
+    }
+}
+@media (max-width:750px) {
+    .features{
+        grid-template-columns: 100%;
+        grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6% ;
+        height: 150vh;
+        max-width: 380px;
+        margin-bottom: 145px;
+    }
+    .albumsnav{
+        max-width:380px ;
+        margin-right: auto;
+        margin-left: 0;
+    }
+    .albumsnav>a>div{
+        margin-top: 18px;
+        margin-bottom: 2px;
+        margin-left: 9px;
+        margin-right: 9px;
+        font-size: 10px;
+        height: 30px;
+    }
+    .listalbums{
+        max-width:300px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: 600px;
+        margin-top: -30px;
+        margin-bottom: 370px;
+    }
+    .img2 img{
+        display: none;
+    }
+    .ci{
+        display: none;
+    }
+    .listalbums>div{
+        background-color:aliceblue;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        box-shadow: 0px 2px 15px -4px rgba(0,0,0,0.50);
+        z-index: 0;
+        position: relative;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .dis{
+        display: none;
+    }
+    .pic2{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-top: -80px;
+    }
+    .cont{
+        background-color: black;
+        width: 100%;
+        left: 0;
+        top: 0;
+        text-align: center
+    }
+    .cont p{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .cont h2{
+        margin-top: 70px;
+    }
+    .poi{
+        top:0;
+        background-color: black;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+    .poin1{
+       position: relative;
+       top: -80px;
+    }
+    .poi div:hover{
+        margin-left: 0;
+    }
+    .slogan{
+        display:grid;
+        height: 140px;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "p"
+        "link";
+    }
+    .slogan p{
+        font-size: 18px; 
+        max-width: 415px;
+        grid-area: p;
+        margin: auto;
+    }
+    .linkk>div{
+        margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .linkk{
+        text-align: center;
+        display:flex;
+        grid-area: link;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    .lstpic{
+        width: 100%;
+        height: 540px;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 30px;
+    }
+    .lstpic>div{
+        height: 270px;
+        width: 100%;
+    }
+    .lstpic>p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:0px 30px ;
+        font-size: 22px;
+    }
+    .linkk:hover div{
+        padding: 16px 19px;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: -3px;
+        transition: 0.5s;
+    }
+    .lstprt{
+        max-width: 700px;
+        height: 260px;
+        margin: 0px 12px;
+    }
+    .lstprt p{
+        font-size: 15px;
+    }
+    .support div{
+        margin-top: 50px;
+    }
+    .pic{
+        width: 100%;
+        height: 400px;
+    }
+    .pic >h1{
+     margin-left: auto;
+     margin-right: auto;
+     color: rgba(240, 248, 255, 0.5);
+    }
+    .pic>p{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    color: rgba(240, 248, 255, 0.459);
+    }
+    .link11{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    }
+    .link1{
+        margin-left: 0;
+        margin-bottom: 20px;
     }
 }
